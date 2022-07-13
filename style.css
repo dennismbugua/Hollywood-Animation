@@ -1,0 +1,74 @@
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+.star {
+  display: inline-block;
+  vertical-align: top;
+  animation: animStar 8s linear infinite;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 62% 34%, 98% 35%, 69% 56%, 80% 92%, 50% 70%, 20% 92%, 31% 56%, 2% 35%, 38% 34%);
+  clip-path: polygon(50% 0%, 62% 34%, 98% 35%, 69% 56%, 80% 92%, 50% 70%, 20% 92%, 31% 56%, 2% 35%, 38% 34%);
+}
+.star:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  background: linear-gradient(to bottom, #e0c24b 0%, #cf7d00 100%);
+  z-index: 10;
+  -webkit-clip-path: polygon(50% 0%, 62% 34%, 98% 35%, 69% 56%, 80% 92%, 50% 70%, 20% 92%, 31% 56%, 2% 35%, 38% 34%);
+  clip-path: polygon(50% 0%, 62% 34%, 98% 35%, 69% 56%, 80% 92%, 50% 70%, 20% 92%, 31% 56%, 2% 35%, 38% 34%);
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1000px;
+  text-align: center;
+  width: 100%;
+}
+
+#star-container {
+  width: 1000px;
+  margin-left: -500px;
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #FFF;
+  text-align: center;
+  font-family: "Holtwood One SC", sans-serif;
+  font-weight: 300;
+  font-size: 55px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(600px) rotate(0deg) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-400px) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
